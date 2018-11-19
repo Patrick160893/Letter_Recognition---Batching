@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Nov 11 09:23:48 2018
-
 @author: patrickorourke
 """
 
@@ -10,7 +9,6 @@ Created on Sun Nov 11 09:23:48 2018
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct 31 09:37:08 2018
-
 @author: patrickorourke
 """
 
@@ -137,4 +135,8 @@ with tf.Session() as sess:
     print(test_loss, round(test_acc, 2) * 100, "%")
     
     plt.plot(train_losses, label='train')
-    plt.legend()  
+    plt.title('Plot of Predicted Letter Values against True Values')
+    #plt.plot(test_losses, label='test')
+    plt.xlabel("Epochs")
+    plt.ylabel("Train Loss")
+    plt.legend() 
